@@ -6,9 +6,9 @@ open Microsoft.Net.Http.Headers
 open System.Text
 open System.Threading.Tasks
 
-let myWebApp next (ctx: HttpContext) =
+let myWebApp =
     // REPLACE WITH YOUR WEB APP IMPLEMENTATION!
-    task { return None }
+    fun _ _ -> Task.FromResult None
 
 
 
