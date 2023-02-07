@@ -1,0 +1,4 @@
+{
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.formatOnSave": true
+}
