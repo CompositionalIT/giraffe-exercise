@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Giraffe" Version="6.0.0" />
+    <PackageReference Include="Saturn" Version="0.16.1" />
   </ItemGroup>
 
 </Project>

@@ -5,20 +5,20 @@ open Microsoft.Extensions.Primitives
 open Microsoft.Net.Http.Headers
 open System.Text
 open System.Threading.Tasks
+open Saturn
 
-let myWebApp =
-    // REPLACE WITH YOUR WEB APP IMPLEMENTATION!
-    fun _ _ -> Task.FromResult None
-
-
-
+let myWebApp = router {
+    get "/" (text "Hello")
+}
 
 
 
 
-// This is boilerplate to create an ASP .NET Core web application
-let builder = WebApplication.CreateBuilder()
-builder.Services.AddGiraffe() |> ignore
-let app = builder.Build()
-app.UseGiraffe myWebApp
-app.Run()
+let app =
+    application {
+        url "http://0.0.0.0:5000"
+        use_router myWebApp
+    }
+
+run app
+
